@@ -6,6 +6,7 @@ const img1 = document.getElementById("image1");
 const img2 = document.getElementById("image2");
 const img3 = document.getElementById("image3");
 const textBox = document.getElementById("text-box");
+const textEl = document.getElementById("sentence");
 
 // image mode colors
 const imageMode = function (color) {
@@ -53,3 +54,35 @@ if (localTheme) {
     chooseModes(true);
   }
 }
+// create typing effect
+const textArray = [
+  "Front End Developer",
+  "Back End Developer",
+  "Full Stack Developer",
+  "Site Maintenance",
+];
+let arrayIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+const typeText = function () {
+  const currentText = textArray[arrayIndex];
+  textEl.textContent = isDeleting
+    ? currentText.substring(0, charIndex - 1)
+    : currentText.substring(0, charIndex + 1);
+  isDeleting ? charIndex-- : charIndex++;
+
+  if (!isDeleting && charIndex > currentText.length) {
+    isDeleting = true;
+    setTimeout(typeText, 1000);
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    arrayIndex = (arrayIndex + 1) % textArray.length;
+    setTimeout(typeText, 500);
+  } else {
+    setTimeout(typeText, 50);
+  }
+};
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(typeText, 1000);
+});
