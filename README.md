@@ -1,1 +1,1 @@
-https://app.netlify.com/sites/tochukwu-e/deploys
+https://tochukwu-e.netlify.app
