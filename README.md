@@ -1,1 +1,1 @@
-www.tochukwu-e.netlify.app
+tochukwu-e.netlify.app
