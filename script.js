@@ -56,10 +56,10 @@ if (localTheme) {
 }
 // create typing effect
 const textArray = [
-  "Front End Developer",
-  "Back End Developer",
-  "Full Stack Developer",
-  "Site Maintenance",
+  "Frontend: HTML5, CSS3, JavaScript (ES6+), React, Sass, Tailwind CSS, Bootstrap",
+  "UI/UX Design: Figma, Adobe XD, Framer",
+  "Tools & Platforms: Git, GitHub, Netlify, Vercel, VS Code, Figma,Linux, Bash",
+  "Other: Responsive Design, Accessibility, SEO Basics, Agile/Scrum",
 ];
 let arrayIndex = 0;
 let charIndex = 0;
